@@ -1,0 +1,208 @@
+  _____               __   __    _        __  __                  __    
+ / ___/__ ___ _____ _/ /  / /_  (_)__    / /_/ /  ___   ___  ___ / /____
+/ /__/ _ `/ // / _ `/ _ \/ __/ / / _ \  / __/ _ \/ -_) / _ \/ -_) __(_-<
+\___/\_,_/\_,_/\_, /_//_/\__/ /_/_//_/  \__/_//_/\__/ /_//_/\__/\__/___/
+              /___/                                                     
+                                                       #11 of 16-Oct '15
+
+
+   _                                                              
+  (_)__ ___ ____ _   __ ___ _ _  __ _  _ _ _ _ _ ___ _ _  __ _  _ 
+  | / _` \ V / _` | / _/ _ \ ' \/ _| || | '_| '_/ -_) ' \/ _| || |
+ _/ \__,_|\_/\__,_| \__\___/_||_\__|\_,_|_| |_| \___|_||_\__|\_, |
+|__/                                                         |__/ 
+  compact guide discusses everything around concurrency and synchronization
+
+Concurrency is always a challenge for developers
+and writing concurrent programs can be extremely
+hard. There is a number of things that could
+potentially blow up and the complexity of
+systems rises considerably when concurrency
+is introduced. However, the ability to write
+robust concurrent programs is a great tool
+in a developer’s belt and can help build
+sophisticated, enterprise level applications.
+
+In this course, you will dive into the magic
+of concurrency. You will be introduced to the
+fundamentals of concurrency and concurrent
+code and you will learn about concepts like
+atomicity, synchronization and thread safety. As
+you advance, the following lessons will deal
+with the tools you can leverage, such as the
+Fork/Join framework, the java.util.concurrent
+JDK package. To sum those up, you will learn
+about testing concurrent applications.
+
+http://java2blog.tradepub.com/free-offer/java-concurrency-essentials/w_java06
+(quite clear guide, almost for free, need
+registration)
+
+
+                           _       
+ ___ __ ___ _ _  ___ _ __ (_)__ ___
+/ -_) _/ _ \ ' \/ _ \ '  \| / _(_-<
+\___\__\___/_||_\___/_|_|_|_\__/__/
+                                   
+  The Biggest Myths
+
+ * the government “prints money”.  * banks
+ “lend reserves” * the US government is
+ running out of money and must pay back the
+ national debt. (who knows?)  * national debt is
+ a burden that will ruin our children’s futures
+ (no? really) * QE is inflationary “money
+ printing” and/or “debt monetization”.
+ * Hyperinflation is caused by “money
+ printing”.  * Government spending drives up
+ interest rates and bond vigilantes control
+ interest rates.  * The Fed was created by a
+ secret cabal of bankers to wreck the US economy.
+ * Fallacy of composition.  * Interest Costs of
+ the National Debt Will Lead to Uncontrollable
+ Interest Burdens * Economics is a science.
+
+http://www.pragcap.com/the-biggest-myths-in-economics-page/
+
+
+
+
+
+
+ _        _           _               
+| |_  ___| |_ __  ___| |_ _ _ _____ __
+| ' \/ -_) | '  \/ -_)  _| '_/ -_) \ /
+|_||_\___|_|_|_|_\___|\__|_| \___/_\_\
+                                      
+  component exchange, with React UI Builder
+
+One of the major features of React UI Builder
+is the source code generation for React
+components. The builder helps developer not only
+to compose UI for a Web application but also it
+generates the source code from combination of
+other components.
+
+React UI Builder is not intended to replace
+the code writing process, it just replaces
+developer’s routine work. Especially it can be
+helpful if we take in account that the builder
+has a pluggable mechanism for generators.
+
+To generate new React component from a
+combination of other components select the root
+component of the combination and choose option
+“Generate new component” from dropdown menu
+of the component’s toolbar.
+
+Modal dialog with a wizard will appear, where we
+have to enter a group of a new component and its
+name, then we have to choose one of the existing
+generators in current project.
+
+In the last step of the wizard we will see
+the prepared source code of the component
+and optionally the source code of other files
+(modules) if the generator was set up to create
+them.
+
+Saving generated source code will cause
+recompilation of the project and we will see new
+component in the left side panel of available
+components.
+
+https://www.youtube.com/watch?v=5nqOFSjXKPI
+http://helmetrex.com/BuildingReactComponent.html
+http://helmetrex.com/StartWithReactUIBuilder.html
+
+
+    _                         
+ __| |_____ __  __ _ __ _ ___ 
+/ _` / -_) V / / _` / _` / -_)
+\__,_\___|\_/  \__,_\__, \___|
+                    |___/     
+  suffering is the Commodity That you Provide
+
+You might be under the impression that what
+makes you qualified for various positions
+in software development is primarily your
+technical acumen and ability to work with other
+technically-capable engineers.
+
+You’d be wrong.
+
+While a certain minimum of capability is required
+to do your day-to-day work, what your value
+really consists of is in grinding yourself
+against the piercing pincers of elusive bugs
+and razor-wire bundles of bullshit code until
+something resembling progress is made.
+
+You are not a problem-solver, you are a
+problem-endurer.
+
+Someone is Always Ready to Undercut You
+
+And the guy who is going to replace our
+newly-spined software architect? He’s the guy
+sitting across from you who never complains
+about the code, never ‘wastes his time’
+cleaning things up, and is always the first to
+shut down ‘toxic’ discussion. He’s the
+one whose ego has him up to his eye-balls in
+debt on consumer goods. As to thinking in terms
+of the next pay-period, he’s already adjusted
+his spending habits for his next promotion!
+
+https://medium.com/@bryanedds/living-in-the-age-of-software-fuckery-8859f81ca877
+
+
+          _   _       _        _      
+ ___ _ __| |_(_)_ __ (_)______| |_  _ 
+/ _ \ '_ \  _| | '  \| |_ / -_) | || |
+\___/ .__/\__|_|_|_|_|_/__\___|_|\_, |
+    |_|                          |__/ 
+  raises $58 Million to Optimize the World
+
+The future of optimization looks very bright and
+we’re so excited about enabling companies to
+optimize every experience.  And it’s important
+that we give thanks to our customers and partners
+for making us the most adopted optimization
+platform in the world.  This is an amazing
+journey and we’re so grateful to be taking it
+with you.
+
+https://blog.optimizely.com/2015/10/13/optimizely-series-c-funding/
+                
+ ___ ____ ___ _ 
+/ _ (_-< V / '_|
+\___/__/\_/|_|  
+                
+  а Hacker Dev Kit preorder
+
+Leap Motion and OSVR today announced that the
+OSVR Hacker Dev Kit will have an optional
+faceplate with Leap Motion’s hardware
+and software embedded, making the HDK the
+first-to-market virtual reality headset with
+natural motion control technology integrated into
+the head mounted display. By merging the speed
+and accuracy of Leap Motion’s hand tracking
+with the growing OSVR ecosystem, users will be
+able to create and interact with a wide range
+of supported content.
+
+“By letting the user connect directly with the
+VR environment, hand tracking allows virtual
+reality to be as natural and intuitive as
+interacting with the real world, giving the user
+a powerful sense of presence and immersion,”
+said Michael Buckwald, CEO and Co-founder of Leap
+Motion. “We're pleased to partner with OSVR to
+bring our technology to the OSVR Hacker Dev Kit,
+helping developers enable the true potential
+of VR."
+
+http://www.razerzone.com/eu-en/store
+

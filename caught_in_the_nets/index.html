@@ -1,0 +1,35 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<style>
+body       { padding: 3%; font-size: 20px; font-size: 1.8vw; font-family: monospace; white-space: pre-wrap; display:block; color: white; }
+div.issues { padding: 2% 2%; background-color: #442266; }
+.issues a  { color: white; line-height: 167%; }
+</style>
+<script>
+window.onload = function(e){
+    $(window).bind('hashchange', function(e) {
+        var hash = window.location.hash.substring(1);
+        $("issues").load(hash + ".txt");
+    });
+};
+</script>
+</head>
+<body><div class="issues">
+  _____               __   __    _        __  __                  __
+ / ___/__ ___ _____ _/ /  / /_  (_)__    / /_/ /  ___   ___  ___ / /____
+/ /__/ _ `/ // / _ `/ _ \/ __/ / / _ \  / __/ _ \/ -_) / _ \/ -_) __(_-<
+\___/\_,_/\_,_/\_, /_//_/\__/ /_/_//_/  \__/_//_/\__/ /_//_/\__/\__/___/
+              /___/
+
+<a href="#1">issue #1 of September</a> 
+<a href="#2">issue #2 of September</a> 
+<a href="#3">issue #3 of September</a> 
+<a href="#4">issue #4 of September</a> 
+<a href="#5">issue #5 of September</a> 
+<a href="#6">issue #6 of September</a> 
+<a href="#7">issue #7 of September</a> 
+<a href="#8">issue #8 of September</a> 
+<a href="#9">issue #9 of September</a></div>
+</body>
+</html>

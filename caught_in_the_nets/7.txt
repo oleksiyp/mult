@@ -1,0 +1,425 @@
+  _____               __   __    _        __  __                  __    
+ / ___/__ ___ _____ _/ /  / /_  (_)__    / /_/ /  ___   ___  ___ / /____
+/ /__/ _ `/ // / _ `/ _ \/ __/ / / _ \  / __/ _ \/ -_) / _ \/ -_) __(_-<
+\___/\_,_/\_,_/\_, /_//_/\__/ /_/_//_/  \__/_//_/\__/ /_//_/\__/\__/___/
+              /___/                                                     
+                                                     #12.1 of 19-Oct '15
+
+
+ _         _ _   
+| |_  __ _| | |_ 
+| ' \/ _` | |  _|
+|_||_\__,_|_|\__|
+                 
+  Global Economy Grinds to a Halt
+
+China’s banks are, in effect, bust: few of the
+vast loans they have made can ever be repaid,
+so they cannot now lend at the rate needed to
+sustain China’s once super-high but illusory
+growth rates. China’s real growth is now below
+that of the Mao years: the economic crisis will
+spawn a crisis of legitimacy for the deeply
+corrupt communist party. Commodity prices have
+crashed.
+
+Money is flooding out of the EMEs, leaving
+overborrowed companies, indebted households and
+stricken banks, but EMEs do not have institutions
+such as the Federal Reserve or European Central
+Bank to knock up rescue packages. Yet these
+nations now account for more than half of global
+GDP. Small wonder the IMF is worried.
+
+http://www.silverdoctors.com/global-economy-grinds-to-a-halt-were-already-in-a-recession/
+
+
+ _____ _         ___         _     __  __         _    _          
+|_   _| |_  ___ / __|___  __| |___|  \/  |__ _ __| |_ (_)_ _  ___ 
+  | | | ' \/ -_) (__/ _ \/ _` / -_) |\/| / _` / _| ' \| | ' \/ -_)
+  |_| |_||_\___|\___\___/\__,_\___|_|  |_\__,_\__|_||_|_|_||_\___|
+                                                                  
+  Find an industry with less impact from the Machine
+
+The streets of New York fill with angry
+protesters. Once in high-demand, they suddenly
+seem to be out of business. They’re raging
+against automation. Against the machine.
+
+...
+
+Not your coding skills, but your business will
+define if you’re still needed. If you’re
+coding basic low-cost websites at a high pace,
+you might run out of business faster than you
+might expect. If you can do it by repetition,
+a machine certainly can do that too. If you’re
+building crucial online services with a lot of
+custom functionality, the machines will have a
+harder time to keep up. Don’t worry about the
+need for your skills, worry about the need for
+your current business.
+
+Both designers and developers will remain
+essential to create something truly unique. By
+understanding what the user really wants. By
+creating interfaces that really work. There is a
+lot of work to do.  So, don’t be intimidated by
+code machines, but don’t be surprised either.
+
+
+https://medium.com/design-and-develop/code-machines-29b066b65716
+
+
+ _  _                 _                 _   _  __ _    _      _ 
+| \| |_____ __ _____ (_)_ _    __ _ _ _| |_(_)/ _(_)__(_)__ _| |
+| .` / -_) V  V (_-< | | ' \  / _` | '_|  _| |  _| / _| / _` | |
+|_|\_\___|\_/\_//__/ |_|_||_| \__,_|_|  \__|_|_| |_\__|_\__,_|_|
+                                                                
+ _     _       _ _ _                                     _ 
+(_)_ _| |_ ___| | (_)__ _ ___ _ _  __ ___   __ _ _ _  __| |
+| | ' \  _/ -_) | | / _` / -_) ' \/ _/ -_) / _` | ' \/ _` |
+|_|_||_\__\___|_|_|_\__, \___|_||_\__\___| \__,_|_||_\__,_|
+                    |___/                                  
+               _    _            _                   _           
+ _ __  __ _ __| |_ (_)_ _  ___  | |___ __ _ _ _ _ _ (_)_ _  __ _ 
+| '  \/ _` / _| ' \| | ' \/ -_) | / -_) _` | '_| ' \| | ' \/ _` |
+|_|_|_\__,_\__|_||_|_|_||_\___| |_\___\__,_|_| |_||_|_|_||_\__, |
+                                                           |___/ 
+  
+How artificial intelligence is moving from the
+lab to your kid’s playroom, The Washington
+Post. Your daughter can now have a conversation
+with her Barbie!
+
+Six human skills Facebook’s artificial
+intelligence tech is slowly mastering, NY
+Business Journal
+
+Hackers can silently control Siri from 16 feet
+away, Wired
+
+Publicis.Sapient Acquires Minority Stake in
+Artificial Intelligence Company Lucid, The
+Wall Street
+
+Journal. Media behemoth looking to power their
+marketing and media buying tools.
+
+The Challenges Of Building AI Apps, by Mike
+Chalfen, TechCrunch
+
+The 7 Parts of Your Business That Need Automation
+Right Now, Inc.
+
+IBM opens Watson competency centre in Victoria,
+ZDNet
+
+Why Artificial Intelligence Should Read and
+Write Stories, Huffington Post
+
+Should cars be fully driverless? No, says an
+engineer and historian
+
+Intelligence amplification will make us as smart
+as the machines
+
+Researchers Digitise Part of a Rat Brain
+(paper here)
+
+Thought process: Building an artificial brain,
+Paul Allen’s $500 million quest to dissect
+the mind and code a new one from scratch
+
+https://medium.com/@NathanBenaich/news-in-artificial-intelligence-and-machine-learning-2f29ed278bae
+
+
+                             _          
+ __ __ _ ______ __ _ _ _  __| |_ _ __ _ 
+/ _/ _` (_-<_-</ _` | ' \/ _` | '_/ _` |
+\__\__,_/__/__/\__,_|_||_\__,_|_| \__,_|
+                                        
+  The Success of Apache Cassandra Certification
+
+DataStax delivered Developer and Administrator
+training at Cassandra Summit, targeting 2 of
+our largest technical personas. Trainees were
+required to complete prerequisite courses online
+via DataStax Academy and gauge their level of
+preparedness via online quizzes. On September
+22nd 2015 (training and certification day),
+our trainers did a 5 hour deep dive into the
+prerequisites, answered questions, and prepared
+our trainees for certification which they took at
+the event. By the numbers, we had 785 individuals
+registered for certification day of which 503
+passed across both Developer and Admin tracks.
+
+As we bask in the success of our first
+certification event, this is just the
+beginning. In addition to Developer Certification
+and Administrator Certification, we recently
+introduced Architect Certification in partnership
+with O’Reilly Media. The Apache Cassandra
+Architect exam combines the skills of both
+Developer and Admin exams and is recommended
+for individuals seeking to get certified on both.
+
+
+
+http://www.datastax.com/2015/10/get-certified-get-ahead-the-success-of-apache-cassandra-certification
+
+
+  ___                _                 ___              _ _          _      
+ / _ \ _  _ __ _ _ _| |_ _  _ _ __    / __|_ _ __ ___ _(_) |_ _  _  (_)_ _  
+| (_) | || / _` | ' \  _| || | '  \  | (_ | '_/ _` \ V / |  _| || | | | ' \ 
+ \__\_\\_,_\__,_|_||_\__|\_,_|_|_|_|  \___|_| \__,_|\_/|_|\__|\_, | |_|_||_|
+                                                              |__/          
+ ___  _   _   ___  _                   _             
+|_  )| |_/ | |   \(_)_ __  ___ _ _  __(_)___ _ _  ___
+ / /_   _| | | |) | | '  \/ -_) ' \(_-< / _ \ ' \(_-<
+/___||_| |_| |___/|_|_|_|_\___|_||_/__/_\___/_||_/__/
+                                                     
+  
+The first comprehensive survey of
+(2+1)-dimensional quantum gravity. It presents
+some fifteen different approaches, comparing the
+resulting theories and suggesting implications
+for the ultimate goal of a (3+1)-dimensional
+theory uniting general relativity and quantum
+mechanics. An invaluable resource for all
+graduate students and researchers working in
+quantum gravity.
+
+http://ebookde.com/quantum-gravity-in-21-dimensions.html
+
+
+          _   _          _ _                   
+ __ _ _ _| |_(_)___ __ _| | |___ _ _ __ _ _  _ 
+/ _` | ' \  _| |___/ _` | | / -_) '_/ _` | || |
+\__,_|_||_\__|_|   \__,_|_|_\___|_| \__, |\_, |
+                                    |___/ |__/ 
+  solution: when the Body Attacks Itself
+12 Ways to Help Treat an Autoimmune Disease
+
+What causes autoimmune disease?  We ultimately
+need a healthy immune system; without it,
+we wouldn’t survive. The immune system is
+hella-smart; it can sniff out and attack foreign
+pathogens, like bacteria, viruses, or toxins,
+just like a bloodhound on the scent of an escaped
+convict. The immune system is the musclebound
+bodyguard for our healthy cells. But, for some
+unknown reason, the immune system can become
+dysfunctional, and it can start to attack healthy
+tissues within the body instead of protecting
+them — this is referred to as an autoimmune
+response or autoimmunity.
+
+12 Ways to Help Treat an Autoimmune Disease
+
+Address food allergies
+
+Clean up your diet
+
+Revamp your gut
+
+Slash your sugar consumption
+
+Use supplements strategically
+
+Juicing
+
+Get moving
+
+De-stress yourself
+
+Test your heavy metal levels
+
+Sleep, sleep, sleep
+
+Hydrate your heart out
+
+Stop smoking
+
+http://alisonsmith.com/treating-autoimmune-disease/
+
+
+    _                        
+ __| |___ __ _ _ _ _  _ _ __ 
+/ _| / -_) _` | ' \ || | '_ \
+\__|_\___\__,_|_||_\_,_| .__/
+                       |_|   
+  Software Reengineering: From Spaghetti to Clean Design
+
+The existing software consisted of a single
+file containing 1,200 lines of undocumented
+code. Yikes. Moreover, it was known to contain
+some bugs and to have some performance issues.
+
+In addition, examination of the log files (always
+a good place to start when inheriting someone
+else’s code) revealed potential memory leak
+issues. At some point, the process was reported
+to be using more than 1GB of RAM.
+
+Code Structure. The code had no real structure
+at all, making it difficult to distinguish
+configuration from infrastructure from business
+logic. There was essentially no modularization
+or separation of concerns.
+
+Redundant code. Some parts of the code (such as
+error handling code for every event handler,
+the code for making web requests, etc.) were
+duplicated multiple times. Replicated code is
+never a good thing, making code significantly
+harder to maintain and more highly prone to
+errors (when the redundant code gets fixed or
+updated in one place but not in the other).
+
+Hardcoded values. The code contained a number
+of hardcoded values (rarely a good thing). Being
+able to modify these values through configuration
+parameters (rather than requiring changes
+to hardcoded values in code) would increase
+flexibility and could also help facilitate
+testing and debugging.
+
+Logging. The logging system was very basic. It
+would generate a single giant log file that was
+difficult and clumsy to analyze or parse.
+
+Key Architectural Objectives
+
+Maintainability. Never write software expecting
+to be the only person who will need to maintain
+it. Always consider how understandable your code
+will be to someone else, and how easy it will
+be for them to modify or debug.
+
+Extensibility. Never assume that the
+functionality you’re implementing today is
+all that will ever be needed. Architect your
+software in ways that will be easy to extend.
+
+Modularity. Separate functionality into logical
+and distinct modules, each with its own clear
+purpose and function.
+
+Scalability. Today’s users are increasingly
+impatient, expecting immediate (or at least
+close-to-immediate) response times. Poor
+performance and high latency can cause even
+the most useful application to fail in the
+marketplace. How will your software perform as
+the number of concurrent users and bandwidth
+requirements increase? Techniques such as
+parallelization, database optimization, and
+asynchronous processing can help improve the
+ability of your system to remain responsive,
+despite increasing load and resource demands.
+
+Conclusion
+
+With all this in place, we have achieved
+a significant cleanup of the code that was
+originally handed to us. This is not about
+making the code perfect, but rather is about
+reengineering it to create a clean architectural
+foundation that will be easier to support and
+maintain, and which will facilitate and simplify
+debugging.
+
+Adhering to the key software design principles
+enumerated earlier – maintainability,
+extensibility, modularity, and scalability –
+we created modules and a code structure that
+clearly and cleanly identified the different
+module responsibilities. We also have identified
+some problems in the original implementation
+that lead to high memory consumption that was
+degrading performance.
+
+Hope you enjoyed the article, let me know if
+you have further comments or questions.
+
+https://gooroo.io/GoorooTHINK/Article/16348/Software-Reengineering-From-Spaghetti-to-Clean-Design/19320
+
+
+   _   ___    __           _          _    _        
+  /_\ |_ _|  / _|___ _ _  | |__  __ _| |__(_)___ ___
+ / _ \ | |  |  _/ _ \ '_| | '_ \/ _` | '_ \ / -_|_-<
+/_/ \_\___| |_| \___/_|   |_.__/\__,_|_.__/_\___/__/
+                                                    
+  START from the conclusion :-)
+
+Well that’s about it! In no way the AI in Toto
+Temple Deluxe is perfect, but it can put up an
+interesting fight without being too previsible
+and that was the goal. Thank you to have read
+this post, and I hope it inspires you to start
+your own little (or big, who knows!) artificial
+intelligence!
+
+http://juicybeast.com/2015/10/baby-steps-to-an-artificial-intelligence/
+
+
+ _   _ ___ ___  
+| | | | __|   \ 
+| |_| | _|| |) |
+ \___/|___|___/ 
+                
+  
+Modern professional software applications are
+often multi-threaded applications with multiple
+processes that are distributed over multiple
+PCs. For these complex systems it is important
+that the execution architecture is well designed
+and properly documented. Well-designed means
+that there are no problems with respect to
+deadlocks, race conditions, context switches,
+thread starvation etc. In practice we often
+experience problems in the execution architecture
+and the quality of the documentation describing
+it is often insufficient.
+
+This article describes a modeling technique
+for making diagrams of the execution
+architecture. The diagram is called a Unified
+Execution Diagram (UED). The UED shows the
+threads, processes, PC deployment, inter
+process communication, reentrant code, queues,
+blocking functions etc. These diagrams can
+be used on architectural level as well as on
+implementation level. To ease the creation of new
+UEDs we have made a MS Visio stencil available
+(click here to download the Visio stencil)
+(Pascal T. Wolkotte and Carlo van Asma, 2011)
+that contains all symbols that can be used in a
+UED. Visio turned out to be a very suitable tool
+for this work especially because of the auto
+routing and line crossing support. Like UML,
+a UED is very suitable to model hybrid systems
+that consists of hardware and software modules.
+
+This new modelling technique has been developed
+because visualizing concurrency in, for example
+UML, does not offer a satisfying solution. Many
+software engineers confirmed this and because of
+this reason the UED has been quickly adopted in
+many design teams within Philips Healthcare. For
+example, a sequence diagram is often used to
+depict a specific use-case, where occasionally
+limitted thread interaction is included. Other
+shortcomming of UML with respect to a UED
+will become clear when reading the rest of
+the document. The UED depicts the interaction
+between all threads in a single diagram. A UED
+can depict all information that is relevant for
+an execution architecture.
+
+
+http://www.infoq.com/articles/unified-execution-diagram
+
+
