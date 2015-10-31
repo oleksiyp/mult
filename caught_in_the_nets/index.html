@@ -10,7 +10,7 @@ div.issues { padding: 2% 2%; background-color: #442266; }
 window.onload = function(e){
     $(window).bind('hashchange', function(e) {
         var hash = window.location.hash.substring(1);
-        $("issues").load(hash + ".txt");
+        $(".issues").load(hash + ".txt");
     });
 };
 </script>
