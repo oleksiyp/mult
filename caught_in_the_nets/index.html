@@ -27,7 +27,7 @@ function imgify(inputText) {
 
 function previousIssue() {
   var issueN = window.location.hash.substring(1);
-  if (/^\d+$/.test(hash)) {
+  if (/^\d+$/.test(issueN)) {
     issueN = parseInt(issueN) - 1;
     if (issueN == 0) {
       window.location.hash = "";
@@ -41,7 +41,7 @@ function previousIssue() {
 
 function nextIssue() {
   var issueN = window.location.hash.substring(1);
-  if (/^\d+$/.test(hash)) {
+  if (/^\d+$/.test(issueN)) {
     issueN = parseInt(issueN) + 1;
     if (issueN > lastN) {
       window.location.hash = "";
