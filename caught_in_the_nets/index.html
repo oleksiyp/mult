@@ -54,10 +54,10 @@ function nextIssue() {
 }
 
 function loadIssue() {
-  var hash = window.location.hash.substring(1);
-  if (/^\d+$/.test(hash)) {
+  var issueN = window.location.hash.substring(1);
+  if (/^\d+$/.test(issueN)) {
     $.ajax({
-      url : hash + ".txt",
+      url : issueN + ".txt",
       dataType: "text",
       success : function (data) {
         $(".text").text(data);
@@ -77,9 +77,7 @@ $(function(){
       else if(e.keyCode == 39) { nextIssue(); }
     });
     loadIssue();
-    $(window).bind('hashchange', function(e) {
-       loadIssue();
-    });
+    $(window).bind('hashchange', loadIssue );
 });
 </script>
 </head>
