@@ -15,6 +15,10 @@
   font-family: monospace;
   white-space: pre-wrap;
 }
+img {
+  border:5px solid #fff;
+  box-shadow: 0 2px 0 #444;
+}
   </style>
 <script type="text/javascript">
 var lastN = 9;
@@ -36,8 +40,8 @@ function linkify(inputText) {
 
 function imgify(inputText) {
     //URLs starting with http://, https://, or ftp://
-    var replacePattern1 = /(\bIMG:[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
-    return inputText.replace(replacePattern1, '<img src="$1" target="_blank">$1</a>');
+    var replacePattern1 = /\bIMG:([-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+    return inputText.replace(replacePattern1, '<img src="009$1" target="_blank">');
 }
 
 function previousIssue() {
@@ -45,7 +49,7 @@ function previousIssue() {
   if (/^\d+$/.test(issueN)) {
     issueN = parseInt(issueN) - 1;
     if (issueN == 0) {
-      window.location.hash = "";
+      window.location.hash = "#issues";
       return;
     } 
   } else {
@@ -59,7 +63,7 @@ function nextIssue() {
   if (/^\d+$/.test(issueN)) {
     issueN = parseInt(issueN) + 1;
     if (issueN > lastN) {
-      window.location.hash = "";
+      window.location.hash = "#issues";
       return;
     } 
   } else {
@@ -88,6 +92,10 @@ $(function(){
     $(".text").html(imgify(linkify($(".text").html())));
     $("body" ).on( "swipeleft", nextIssue );
     $("body" ).on( "swiperight", previousIssue );
+    $('.issues a').bind('click', function(ev) {
+      window.location.hash = $(this).attr('href');
+      return false;
+    });
     $("body").keydown(function(e) {
       if(e.keyCode == 37) { previousIssue(); }
       else if(e.keyCode == 39) { nextIssue(); }
@@ -100,15 +108,15 @@ $(function(){
 <body>
 <div data-role="page" data-theme="a">
 <div data-role="header" data-position="inline" class="mono">
-<p><a name="4">
+<p>
    _____               __   __    _        __  __                  __
   / ___/__ ___ _____ _/ /  / /_  (_)__    / /_/ /  ___   ___  ___ / /____
  / /__/ _ `/ // / _ `/ _ \/ __/ / / _ \  / __/ _ \/ -_) / _ \/ -_) __(_-<
  \___/\_,_/\_,_/\_, /_//_/\__/ /_/_//_/  \__/_//_/\__/ /_//_/\__/\__/___/
                /___/
-</a></p>
+</p>
 </div>
-<div data-role="content" data-theme="a" class="mono"><p class="text">http://google.com</p><p><ul data-role="listview">
+<div data-role="content" data-theme="a" class="mono"><p class="text">http://google.com</p><p><ul class="issues" data-role="listview">
   <li><a href="#1">issue #1 of 19-Sep '15</a></li>
   <li><a href="#2">issue #2 of 26-Sep '15</a></li>
   <li><a href="#3">issue #3 of 3-Oct '15</a></li>

@@ -87,7 +87,6 @@ energy". In the same way that adding carbon to
 iron makes it stronger, becoming a melting pot
 of talent will make your team stronger.
 
-IMG:003-sonic.jpg
 
 https://medium.com/swlh/don-t-destroy-your-dev-team-by-growing-eef50d83090e
 
@@ -158,8 +157,6 @@ cutting 26,000 jobs. However, ‘only’ 9,000
 jobs are being cut on a net basis and the others
 are to disappear as part of asset disposals.
 
-IMG:004-deutche-bank.jpg
-
 Separately, now that it’s cool to get out
 of banking and do a coding course, it might be
 worth checking you have the right personality
@@ -192,8 +189,6 @@ paper of theirs had concluded that countries with
 a debt-to-GDP ratio of more than 90 per cent
 tended to have contracting economies, and was
 cited by some as a justification for austerity.
-
-IMG:005-reproducability.png
 
 Reinhart and Rogoff admitted an “accidental
 omission” that led to some countries being
@@ -450,7 +445,6 @@ he said.
 
 http://phys.org/news/2015-10-physicists-phase-transition.html#jCp
 
-IMG:006-phase-transition.jpg
 
             _      _   _          _         _         _            _    
 __ __ _____(_)__ _| |_| |_ ___ __| |  _ __ (_)_ _ ___| |_  __ _ __| |_  
@@ -547,7 +541,7 @@ not overtly visible…it’s subtle,” he says.
 
 http://ieet.org/index.php/IEET/more/faggella20151025
 
-IMG:007-ai.jpg
+
               _ _         _        _ 
  _ __  ___ __| (_)__ __ _| |  __ _(_)
 | '  \/ -_) _` | / _/ _` | | / _` | |
@@ -618,8 +612,6 @@ http://www.cio.com/article/2997174/big-data/artificial-intelligence-humankinds-b
  \__\___\__|_||_| \__,_\___|_.__/\__|
                                      
   What It Is & Isn't
-
-IMG:008-debt.jpg
 
 A typical example for incurring technical debt in
 code is that huge source file every developer
@@ -705,8 +697,6 @@ the development of a seizure disorder could
 be prevented. "However, this still needs to be
 demonstrated in further studies," says Dr. Karen
 M.J. van Loo.
-
-IMG:009-epi.jpg
 
 http://medicalxpress.com/news/2015-10-epilepsy.html
 
