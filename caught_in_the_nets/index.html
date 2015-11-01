@@ -62,19 +62,6 @@ function loadIssue() {
       success : function (data) {
         $(".text").text(data);
         $(".text").html(imgify(linkify($(".text").html())));
-        $(".outlink").each(function(link) {
-          var href = $(link).attr("href");
-          var innerHtml = $(link).html()
-          alert(href + " == " + innerHtml);
-          if (innerHtml == href) {
-            $.ajax({
-              url : "http://radar.runway7.net?url=" + href,
-              success : function(metainfo) {
-                alert(metainfo.title);
-              }
-            });
-          }
-        });
        }
     });
   } else {
