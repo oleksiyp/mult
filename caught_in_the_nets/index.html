@@ -4,9 +4,9 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <style>
-body       { padding: 3%; font-size: 20px; font-size: 1.4vw; font-family: monospace; white-space: pre-wrap; display:block; }
-div.text   { padding: 2% 2%; background-color: #662244; color: white; text-shadow: 0 1px 0 #331122; }
-div.issues { padding: 2% 2%; background-color: #442266; color: white; text-shadow: 0 1px 0 #221133; }
+body       { padding: 3%; font-size: 20px; font-size: 1.4vw; font-family: monospace; white-space: pre-wrap; display:block; background-color: #662244; color: white; text-shadow: 0 1px 0 #331122; }
+div.issue  { padding: 2% 2%; }
+div.issues { padding: 2% 2%; }
 .issues a  { color: white; line-height: 167%; }
 </style>
 <script>
@@ -82,13 +82,13 @@ $(function(){
 });
 </script>
 </head>
-<body><div class="text">
+<body><div class="issue"><div class="head">
   _____               __   __    _        __  __                  __
  / ___/__ ___ _____ _/ /  / /_  (_)__    / /_/ /  ___   ___  ___ / /____
 / /__/ _ `/ // / _ `/ _ \/ __/ / / _ \  / __/ _ \/ -_) / _ \/ -_) __(_-<
 \___/\_,_/\_,_/\_, /_//_/\__/ /_/_//_/  \__/_//_/\__/ /_//_/\__/\__/___/
               /___/
-</div><div class="issues">
+</div><div class="text"></div><div class="issues">
 <a href="#1">issue #1 of 19-Sep '15</a> 
 <a href="#2">issue #2 of 26-Sep '15</a> 
 <a href="#3">issue #3 of 3-Oct '15</a> 
