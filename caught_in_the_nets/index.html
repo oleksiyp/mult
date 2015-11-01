@@ -1,6 +1,8 @@
 <html>
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 <style>
 body       { padding: 3%; font-size: 20px; font-size: 1.4vw; font-family: monospace; white-space: pre-wrap; display:block; color: white; }
 div.issues { padding: 2% 2%; background-color: #442266; }
@@ -8,20 +10,47 @@ div.issues { padding: 2% 2%; background-color: #442266; }
 </style>
 <script>
 
+var lastN = 9;
+
 function linkify(inputText) {
     //URLs starting with http://, https://, or ftp://
     var replacePattern1 = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
-    var replacedText = inputText.replace(replacePattern1, '<a href="$1" target="_blank">$1</a>');
+    return inputText.replace(replacePattern1, '<a class="outlink" href="$1">$1</a>');
+}
 
-    //URLs starting with www. (without // before it, or it'd re-link the ones done above)
-    var replacePattern2 = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
-    var replacedText = replacedText.replace(replacePattern2, '$1<a href="http://$2" target="_blank">$2</a>');
 
-    //Change email addresses to mailto:: links
-    var replacePattern3 = /(\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6})/gim;
-    var replacedText = replacedText.replace(replacePattern3, '<a href="mailto:$1">$1</a>');
+function imgify(inputText) {
+    //URLs starting with http://, https://, or ftp://
+    var replacePattern1 = /(\bIMG:[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+    return inputText.replace(replacePattern1, '<img src="$1" target="_blank">$1</a>');
+}
 
-    return replacedText
+function previousIssue() {
+  var issueN = window.location.hash.substring(1);
+  if (/^\d+$/.test(hash)) {
+    issueN = parseInt(issueN) - 1;
+    if (issueN == 0) {
+      window.location.hash = "";
+      return;
+    } 
+  } else {
+    issueN = lastN;
+  }
+  window.location.hash = "#" + issueN;
+}
+
+function nextIssue() {
+  var issueN = window.location.hash.substring(1);
+  if (/^\d+$/.test(hash)) {
+    issueN = parseInt(issueN) + 1;
+    if (issueN > lastN) {
+      window.location.hash = "";
+      return;
+    } 
+  } else {
+    issueN = 1;
+  }
+  window.location.hash = "#" + issueN;
 }
 
 function loadIssue() {
@@ -31,28 +60,49 @@ function loadIssue() {
       url : hash + ".txt",
       dataType: "text",
       success : function (data) {
-        $(".issues").text(data);
-        $(".issues").html(linkify($(".issues").html()));
-      }
+        $(".text").text(data);
+        $(".text").html(imgify(linkify($(".text").html())));
+        $(".outlink").each(function(link) {
+          var href = $(link).attr("href");
+          var innerHtml = $(link).html()
+          alert(href + " == " + innerHtml);
+          if (innerHtml == href) {
+            $.ajax({
+              url : "http://radar.runway7.net?url=" + href,
+              success : function(metainfo) {
+                alert(metainfo.title);
+              }
+            });
+          }
+        });
+       }
     });
-  }
+  } else {
+    $(".text").html("");
+  } 
 }
 
-window.onload = function(e){
+$(function(){
+    $(".text" ).on( "swipeleft", previousIssue );
+    $(".text" ).on( "swiperight", nextIssue );
+    $("body").keydown(function(e) {
+      if(e.keyCode == 37) { previousIssue(); }
+      else if(e.keyCode == 39) { nextIssue(); }
+    });
     loadIssue();
     $(window).bind('hashchange', function(e) {
        loadIssue();
     });
-};
+});
 </script>
 </head>
-<body><div class="issues">
+<body><div class="text">
   _____               __   __    _        __  __                  __
  / ___/__ ___ _____ _/ /  / /_  (_)__    / /_/ /  ___   ___  ___ / /____
 / /__/ _ `/ // / _ `/ _ \/ __/ / / _ \  / __/ _ \/ -_) / _ \/ -_) __(_-<
 \___/\_,_/\_,_/\_, /_//_/\__/ /_/_//_/  \__/_//_/\__/ /_//_/\__/\__/___/
               /___/
-
+</div><div class="issues">
 <a href="#1">issue #1 of 19-Sep '15</a> 
 <a href="#2">issue #2 of 26-Sep '15</a> 
 <a href="#3">issue #3 of 3-Oct '15</a> 
