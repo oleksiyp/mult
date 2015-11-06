@@ -5,9 +5,10 @@
   <title>Caught in the nets</title>
   <link rel="stylesheet" href="themes/citn.min.css" />
   <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <link rel="stylesheet" href="3party/jquery.mobile.structure-1.4.5.min.css" />
+  <script src="3party/jquery.min.js" type="text/javascript"></script>
+  <script src="3party//jquery.mobile-1.4.5.min.js"></script>
   <style type="text/css">
 .header p {
   font-size: 20px; 
@@ -27,7 +28,23 @@ img {
 }
   </style>
 <script type="text/javascript">
-var lastN = 9;
+var lastN = 10;
+var screen = "large";
+
+
+<!---
+screen: "half", "full" and "wide"
+
+if "issue has half size"
+  if screen == "half"
+    link to "half" ("full")
+  else if screen == "full" && screen == "wide"
+    link to "full" ("half")
+if "issue has no half size"
+  link to "full"
+
+--->
+
 
 function cut(s, l, e) {
   if (s.length > l) {
@@ -35,6 +52,13 @@ function cut(s, l, e) {
   } else {
     return s;
   }
+}
+
+
+
+
+function hasHalf(n) {
+    return n >= 10;
 }
 
 function linkify(inputText) {
@@ -51,31 +75,31 @@ function imgify(inputText) {
 }
 
 function previousIssue() {
-  var issueN = window.location.hash.substring(1);
-  if (/^\d+$/.test(issueN)) {
-    issueN = parseInt(issueN) - 1;
-    if (issueN == 0) {
-      window.location.hash = "#issues";
-      return;
-    } 
-  } else {
-    issueN = lastN;
-  }
-  window.location.hash = "#" + issueN;
+    var issueN = window.location.hash.substring(1);
+    if (/^\d+$/.test(issueN)) {
+      issueN = parseInt(issueN) - 1;
+      if (issueN == 0) {
+        window.location.hash = "#issues";
+        return;
+      } 
+    } else {
+      issueN = lastN;
+    }
+    window.location.hash = "#" + issueN;
 }
 
 function nextIssue() {
-  var issueN = window.location.hash.substring(1);
-  if (/^\d+$/.test(issueN)) {
-    issueN = parseInt(issueN) + 1;
-    if (issueN > lastN) {
-      window.location.hash = "#issues";
-      return;
-    } 
-  } else {
-    issueN = 1;
-  }
-  window.location.hash = "#" + issueN;
+    var issueN = window.location.hash.substring(1);
+    if (/^\d+$/.test(issueN)) {
+      issueN = parseInt(issueN) + 1;
+      if (issueN > lastN) {
+        window.location.hash = "#issues";
+        return;
+      } 
+    } else {
+      issueN = 1;
+    }
+    window.location.hash = "#" + issueN;
 }
 
 function loadIssue() {
