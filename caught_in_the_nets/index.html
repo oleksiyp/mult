@@ -11,22 +11,36 @@
   <script src="3party/jquery.mobile-1.4.5.min.js"></script>
   <style type="text/css">
 .header p {
-  font-size: 20px; 
-  font-size: 1.9vw; 
+  font-size: 20px;
+  font-size: 2.0vw;
   font-family: monospace;
   white-space: pre-wrap;
 }
-.mono p {
-  font-size: 20px; 
-  font-size: 1.9vw; 
+.wide .header .p {
+  font-size: 24px !important;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text p {
+  font-size: 20px;
+  font-size: 2.1vw; 
   font-family: monospace;
   white-space: pre-wrap;
 }
-.half p {
-  font-size: 20px; 
-  font-size: 3.9vw; 
-  font-family: monospace;
-  white-space: pre-wrap;
+.wide .text p {
+  font-size: 24px !important;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.text.half p {
+  font-size: 3.2vw;
+}
+.wide .text.half p {
+  max-width: 500px !important;
+}
+.half img {
+  max-width: 93% !important;
 }
 img {
   border:5px solid #fff;
@@ -35,22 +49,11 @@ img {
 }
   </style>
 
-<!---
-screen: "half", "full" and "wide"
-
-if "issue has half size"
-  if screen == "half"
-    link to "half" ("full")
-  else if screen == "full" && screen == "wide"
-    link to "full" ("half")
-if "issue has no half size"
-  link to "full"
-
---->
-
 <script type="text/javascript">
 var lastN = 10;
 var screen = "large";
+var issueN = 0;
+var half = "";
 
 function cut(s, l, e) {
   if (s.length > l) {
@@ -72,7 +75,7 @@ function fmtIndex(n) {
 
 
 function hasHalf(n) {
-    return n >= 10;
+     return n >= 10;
 }
 
 function linkify(inputText) {
@@ -88,54 +91,130 @@ function imgify(n, inputText) {
     return inputText.replace(replacePattern1, '<img src="' + fmtIndex(n) + '$1" target="_blank">');
 }
 
+function setLocation() {
+    checkHalf();
+    window.location.hash = "#" + issueN + half;
+}
+
+function setHalf(newVal) {
+  if (newVal) {
+     if (!half) {
+       half = "half";
+       $(".text").toggleClass("half", true);
+       setLocation();
+     }
+  } else {
+    if (half) {
+      half = "";
+      $(".text").toggleClass("half", false);
+      setLocation();
+    }
+  }
+}
+
+function checkHalf() {
+  if (!hasHalf(issueN)) {
+     setHalf();
+  }
+}
+
+function jumpIssues() {
+  window.location.hash = "#issues";
+}
+
+function parseLocation() {
+  issueN = window.location.hash.substring(1);
+  if (/^\d+(half)?$/.test(issueN)) {
+    setHalf(/half$/.test(issueN));
+    issueN = parseInt(issueN);
+    checkHalf();
+    return true;
+  }
+  jumpIssues();
+  return false;
+}
+
 function previousIssue() {
-    var issueN = window.location.hash.substring(1);
-    if (/^\d+$/.test(issueN)) {
+    if (parseLocation()) {
       issueN = issueN - 1;
       if (issueN == 0) {
-        window.location.hash = "#issues";
+        jumpIssues();
         return;
       } 
     } else {
       issueN = lastN;
     }
-    window.location.hash = "#" + issueN;
+    setLocation();
 }
 
+
 function nextIssue() {
-    var issueN = window.location.hash.substring(1);
-    if (/^\d+$/.test(issueN)) {
+    if (parseLocation()) {
       issueN = issueN + 1;
       if (issueN > lastN) {
-        window.location.hash = "#issues";
+        jumpIssues();
         return;
       } 
     } else {
       issueN = 1;
     }
-    window.location.hash = "#" + issueN;
+    setLocation();
 }
 
 function loadIssue() {
-  var issueN = window.location.hash.substring(1);
-  if (/^\d+$/.test(issueN)) {
-    issueN = parseInt(issueN);
+  if (parseLocation()) {
     $.ajax({
-      url : issueN + ".txt",
+      url : fmtIndex(issueN) + half + ".txt",
       dataType: "text",
-      success : function (data) {
-        $(".text").text(data);
-        $(".text").html(imgify(issueN, linkify($(".text").html())));
+      success : function (issueText) {
+        var textPar = $(".text p")
+        textPar.text(issueText);
+
+        var issueHtml = textPar.html();
+        issueHtml = linkify(issueHtml);
+        issueHtml = imgify(issueN, issueHtml);
+        textPar.html(issueHtml);
        }
     });
   } else {
-    $(".text").html("");
+    $(".text p").html("");
   } 
 }
 
+function switchScreenType(screenType) {
+  switch(screenType) {
+  case 'normal':
+    $(".page").toggleClass("wide", false);
+    setHalf(false);
+    break;    
+  case 'wide':
+    $(".page").toggleClass("wide", true);
+    setHalf(false);
+    break;    
+  case 'half':
+    $(".page").toggleClass("wide", false);
+    setHalf(true);
+    break;
+  }
+}
+
+function responsiveness() {
+  var width = $(window).width();
+  if (width < 500) {
+    switchScreenType("half");
+  } else if (width >= 1200) {
+    switchScreenType("wide");
+  } else {
+    switchScreenType("normal");
+  }
+}
+
 $(function(){
+    parseLocation();
     $("body" ).on( "swipeleft", nextIssue );
     $("body" ).on( "swiperight", previousIssue );
+    $(window).bind('resize', responsiveness);
+    responsiveness();
     $('.issues a').bind('click', function(ev) {
       window.location.hash = $(this).attr('href');
       return false;
@@ -150,7 +229,7 @@ $(function(){
 </script> 
 </head>
 <body>
-<div data-role="page" data-theme="a">
+<div data-role="page" data-theme="a" class="page">
 <div data-role="header" data-position="inline" class="header">
 <p>
    _____               __   __    _        __  __                  __
@@ -160,7 +239,9 @@ $(function(){
                /___/
 </p>
 </div>
-<div data-role="content" data-theme="a" class="mono"><p class="text"></p><ul class="issues" data-role="listview">
+<div data-role="content" data-theme="a">
+<div class="text"><p></p></div>
+<ul class="issues" data-role="listview">
   <li><a href="#1">issue #1 of 19-Sep '15</a></li>
   <li><a href="#2">issue #2 of 26-Sep '15</a></li>
   <li><a href="#3">issue #3 of 3-Oct '15</a></li>
