@@ -41,7 +41,8 @@ https://www.quantstart.com/advanced-algorithmic-trading-ebook
 (_-</ _` \ V / | ' \/ _` (_-<
 /__/\__,_|\_/|_|_||_\__, /__/
                     |___/    
-  We don’t save for the future because we lie to ourselves. This app might change that
+  We don’t save for the future because we lie to ourselves. 
+This app might change that
 
 I personally belive this author because
 of the book Predictably Irrational.
