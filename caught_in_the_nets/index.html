@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="3party/jquery.mobile.structure-1.4.5.min.css" />
   <script src="3party/jquery.min.js" type="text/javascript"></script>
-  <script src="3party//jquery.mobile-1.4.5.min.js"></script>
+  <script src="3party/jquery.mobile-1.4.5.min.js"></script>
   <style type="text/css">
 .header p {
   font-size: 20px; 
@@ -18,6 +18,12 @@
 }
 .mono p {
   font-size: 20px; 
+  font-size: 1.9vw; 
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+.half p {
+  font-size: 20px; 
   font-size: 3.9vw; 
   font-family: monospace;
   white-space: pre-wrap;
@@ -25,12 +31,9 @@
 img {
   border:5px solid #fff;
   box-shadow: 0 2px 0 #444;
+  max-width: 70%
 }
   </style>
-<script type="text/javascript">
-var lastN = 10;
-var screen = "large";
-
 
 <!---
 screen: "half", "full" and "wide"
@@ -45,6 +48,9 @@ if "issue has no half size"
 
 --->
 
+<script type="text/javascript">
+var lastN = 10;
+var screen = "large";
 
 function cut(s, l, e) {
   if (s.length > l) {
@@ -54,7 +60,15 @@ function cut(s, l, e) {
   }
 }
 
-
+function fmtIndex(n) {
+  if (n < 10) {
+     return "00" + n;
+  } else if (n < 100) {
+     return "0" + n;
+  } else {
+     return "" + n;
+  }
+}
 
 
 function hasHalf(n) {
@@ -68,16 +82,16 @@ function linkify(inputText) {
 }
 
 
-function imgify(inputText) {
+function imgify(n, inputText) {
     //URLs starting with http://, https://, or ftp://
     var replacePattern1 = /\bIMG:([-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
-    return inputText.replace(replacePattern1, '<img src="009$1" target="_blank">');
+    return inputText.replace(replacePattern1, '<img src="' + fmtIndex(n) + '$1" target="_blank">');
 }
 
 function previousIssue() {
     var issueN = window.location.hash.substring(1);
     if (/^\d+$/.test(issueN)) {
-      issueN = parseInt(issueN) - 1;
+      issueN = issueN - 1;
       if (issueN == 0) {
         window.location.hash = "#issues";
         return;
@@ -91,7 +105,7 @@ function previousIssue() {
 function nextIssue() {
     var issueN = window.location.hash.substring(1);
     if (/^\d+$/.test(issueN)) {
-      issueN = parseInt(issueN) + 1;
+      issueN = issueN + 1;
       if (issueN > lastN) {
         window.location.hash = "#issues";
         return;
@@ -105,12 +119,13 @@ function nextIssue() {
 function loadIssue() {
   var issueN = window.location.hash.substring(1);
   if (/^\d+$/.test(issueN)) {
+    issueN = parseInt(issueN);
     $.ajax({
       url : issueN + ".txt",
       dataType: "text",
       success : function (data) {
         $(".text").text(data);
-        $(".text").html(imgify(linkify($(".text").html())));
+        $(".text").html(imgify(issueN, linkify($(".text").html())));
        }
     });
   } else {
@@ -119,7 +134,6 @@ function loadIssue() {
 }
 
 $(function(){
-    $(".text").html(imgify(linkify($(".text").html())));
     $("body" ).on( "swipeleft", nextIssue );
     $("body" ).on( "swiperight", previousIssue );
     $('.issues a').bind('click', function(ev) {
@@ -146,7 +160,7 @@ $(function(){
                /___/
 </p>
 </div>
-<div data-role="content" data-theme="a" class="mono"><p class="text">http://google.com</p><p><ul class="issues" data-role="listview">
+<div data-role="content" data-theme="a" class="mono"><p class="text"></p><ul class="issues" data-role="listview">
   <li><a href="#1">issue #1 of 19-Sep '15</a></li>
   <li><a href="#2">issue #2 of 26-Sep '15</a></li>
   <li><a href="#3">issue #3 of 3-Oct '15</a></li>
@@ -156,7 +170,7 @@ $(function(){
   <li><a href="#7">issue #7 of 19-Oct '15</a></li>
   <li><a href="#8">issue #8 of 23-Oct '15</a></li>
   <li><a href="#9">issue #9 of 29-Oct '15</a></li>
-  <li><a href="#9">issue #10 of 29-Oct '15</a></li>
+  <li><a href="#10">issue #10 of 29-Oct '15</a></li>
 </ul>
 </p></div>
 </div></body></html>
