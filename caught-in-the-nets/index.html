@@ -65,6 +65,7 @@ var lastN = 10;
 var screen = "large";
 var issueN = 0;
 var half = "";
+var baseTitle = "Caught in the nets";
 
 if (!window.console) console = {};
 console.debug = console.debug || function(){};
@@ -87,7 +88,6 @@ function fmtIndex(n) {
   }
 }
 
-
 function hasHalf(n) {
      return n >= 10;
 }
@@ -103,6 +103,14 @@ function imgify(n, inputText) {
     //URLs starting with http://, https://, or ftp://
     var replacePattern1 = /\bIMG:([-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
     return inputText.replace(replacePattern1, '<img src="' + fmtIndex(n) + '$1" target="_blank">');
+}
+
+function putIssueToTitle() {
+    if (issueN) {
+      document.title = baseTitle + " #" + issueN;
+    } else {
+      document.title = baseTitle;
+    }
 }
 
 function setLocation() {
@@ -147,6 +155,7 @@ function parseLocation() {
     checkHalf();
     return true;
   } else {
+    issueN = "";
     jumpIssues();
   }
   return false;
@@ -188,6 +197,7 @@ function pageView() {
 
 function loadIssue() {
   if (parseLocation()) {
+    var loading = loader(baseTitle);
     $.ajax({
       url : fmtIndex(issueN) + half + ".txt",
       dataType: "text",
@@ -199,10 +209,12 @@ function loadIssue() {
         issueHtml = linkify(issueHtml);
         issueHtml = imgify(issueN, issueHtml);
         textPar.html(issueHtml);
-       }
-    });
+      },
+    }).done(function() { setTimeout(function(){ loading.stop(); putIssueToTitle(); }, 1000); });
+
   } else {
     $(".text p").html("");
+    putIssueToTitle();
   } 
 }
 
@@ -223,6 +235,11 @@ function switchScreenType(screenType) {
   }
 }
 
+function setLongerSwipe() {
+  $.event.special.swipe.horizontalDistanceThreshold = Math.max($(window).width() / 10, 30);
+  $.event.special.swipe.scrollSupressionThreshold = Math.max($(window).width() / 11, 10);
+}
+
 function responsiveness() {
   var width = $(window).width();
   if (width < 500) {
@@ -232,11 +249,20 @@ function responsiveness() {
   } else {
     switchScreenType("normal");
   }
+  setLongerSwipe();
 }
 
+
+var rotateHeaderTimer = "";
 $(function(){
     parseLocation();
     pageView();
+    $(".header").bind('dblclick', function() {
+       if (!rotateHeaderTimer) {
+          rotateHeaderTimer = headerRotator();
+          setTimeout(function() { rotateHeaderTimer.stop(); rotateHeaderTimer = ""; }, 500);
+       }
+    });
     $("body" ).on( "swipeleft", nextIssue );
     $("body" ).on( "swiperight", previousIssue );
     $(window).bind('resize', responsiveness);
@@ -253,12 +279,62 @@ $(function(){
     loadIssue();
     $(window).bind('hashchange', loadIssue );
 });
+
+<!-- one more idea: rotate text headers on Ctrl-A -->
+var rotatingSymbols = ['/', '-', '\\', '|', '/', '_', '\\', '|'];
+function rotateN(txt, n) {
+  var rTxt = "";
+  for (var i = 0, len = txt.length; i < len; i++) {
+    var c = txt[i];
+    for (var j = 0; j < 8; j++) {
+       if (c == rotatingSymbols[j]) {
+         c = rotatingSymbols[(j + n) % 8];
+         break;
+       }
+     }
+     rTxt += c;
+  }
+  return rTxt;
+}
+
+function rotateHeader(n) {
+  var txt = $('.header p').text();
+  txt = rotateN(txt, n)
+  $('.header p').text(txt);
+}
+
+var headerRotationN = 0;
+function headerRotator() {
+  var initialTxt = $('.header p').text();
+  var stopRotation = false;
+  var timer = setInterval(function() {
+    headerRotationN++;
+    rotateHeader(1);
+    if (stopRotation && (headerRotationN % 8 == 0)) {
+      clearInterval(timer);
+      $('.header p').text(initialTxt);
+    }
+  }, 50);
+  return { stop: function() { stopRotation = true; } };
+}
+
+var loaderN = 0;
+var loadingSymbols = ['/', '-', '\\', '|', '/', '-', '\\', '|'];
+function loader(title) {
+  var timer = setInterval(function() {
+    loaderN++;
+    document.title = loadingSymbols[loaderN % 8] + ' ' + title;
+  }, 200);
+  return { stop: function() { document.title = title;; clearInterval(timer); } };
+}
+
+
 </script> 
 </head>
 <body>
 <div data-role="page" data-theme="a" class="page">
 <div data-role="header" data-position="inline" class="header">
-<p>
+<p unselectable="on" style="user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -o-user-select: none;">
    _____               __   __    _        __  __                  __
   / ___/__ ___ _____ _/ /  / /_  (_)__    / /_/ /  ___   ___  ___ / /____
  / /__/ _ `/ // / _ `/ _ \/ __/ / / _ \  / __/ _ \/ -_) / _ \/ -_) __(_-<
@@ -279,7 +355,7 @@ $(function(){
   <li><a href="#7">issue #7 of 19-Oct '15</a></li>
   <li><a href="#8">issue #8 of 23-Oct '15</a></li>
   <li><a href="#9">issue #9 of 29-Oct '15</a></li>
-  <li><a href="#10">issue #10 of 29-Oct '15</a></li>
+  <li><a href="#10">issue #10 of 6-Nov '15</a></li>
 </ul>
 </p>
 <div class="sources">
