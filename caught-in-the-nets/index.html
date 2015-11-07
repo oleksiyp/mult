@@ -105,12 +105,16 @@ function imgify(n, inputText) {
     return inputText.replace(replacePattern1, '<img src="' + fmtIndex(n) + '$1" target="_blank">');
 }
 
-function putIssueToTitle() {
+function composeTitle() {
     if (issueN) {
-      document.title = baseTitle + " #" + issueN;
+      return baseTitle + " #" + issueN;
     } else {
-      document.title = baseTitle;
+      return baseTitle;
     }
+}
+
+function putIssueToTitle() {
+    document.title = composeTitle();
 }
 
 function setLocation() {
@@ -197,7 +201,7 @@ function pageView() {
 
 function loadIssue() {
   if (parseLocation()) {
-    var loading = loader(baseTitle);
+    var loading = loader(composeTitle);
     $.ajax({
       url : fmtIndex(issueN) + half + ".txt",
       dataType: "text",
@@ -210,8 +214,22 @@ function loadIssue() {
         issueHtml = imgify(issueN, issueHtml);
         textPar.html(issueHtml);
       },
-    }).done(function() { setTimeout(function(){ loading.stop(); putIssueToTitle(); }, 1000); });
-
+      xhr: function(){
+        var xhr = $.ajaxSettings.xhr();
+        var interval = setInterval(function () {
+          if (xhr.readyState > 2) {
+            console.debug('progress');
+          } else {
+            console.debug('done');
+            clearInterval(interval);
+          }
+        }, 150);
+        return xhr;
+      }
+    }).done(function() {
+      loading.stop();
+      putIssueToTitle();
+    });
   } else {
     $(".text p").html("");
     putIssueToTitle();
@@ -253,33 +271,6 @@ function responsiveness() {
 }
 
 
-var rotateHeaderTimer = "";
-$(function(){
-    parseLocation();
-    pageView();
-    $(".header").bind('dblclick', function() {
-       if (!rotateHeaderTimer) {
-          rotateHeaderTimer = headerRotator();
-          setTimeout(function() { rotateHeaderTimer.stop(); rotateHeaderTimer = ""; }, 500);
-       }
-    });
-    $("body" ).on( "swipeleft", nextIssue );
-    $("body" ).on( "swiperight", previousIssue );
-    $(window).bind('resize', responsiveness);
-    responsiveness();
-    $('.issues a').bind('click', function(ev) {
-      pageView();
-      window.location.hash = $(this).attr('href');
-      return false;
-    });
-    $("body").keydown(function(e) {
-      if(e.keyCode == 37) { previousIssue(); }
-      else if(e.keyCode == 39) { nextIssue(); }
-    });
-    loadIssue();
-    $(window).bind('hashchange', loadIssue );
-});
-
 <!-- one more idea: rotate text headers on Ctrl-A -->
 var rotatingSymbols = ['/', '-', '\\', '|', '/', '_', '\\', '|'];
 function rotateN(txt, n) {
@@ -318,15 +309,52 @@ function headerRotator() {
   return { stop: function() { stopRotation = true; } };
 }
 
+function headerEffect() {
+  if (!rotateHeaderTimer) {
+    rotateHeaderTimer = headerRotator();
+    setTimeout(function() { rotateHeaderTimer.stop(); rotateHeaderTimer = ""; }, 500);
+  }
+}
+
+
 var loaderN = 0;
 var loadingSymbols = ['/', '-', '\\', '|', '/', '-', '\\', '|'];
 function loader(title) {
   var timer = setInterval(function() {
     loaderN++;
-    document.title = loadingSymbols[loaderN % 8] + ' ' + title;
+    document.title = loadingSymbols[loaderN % 8] + ' ' + title();
   }, 200);
-  return { stop: function() { document.title = title;; clearInterval(timer); } };
+  return { stop: function() { document.title = title(); clearInterval(timer); } };
 }
+
+
+var rotateHeaderTimer = "";
+$(function(){
+    parseLocation();
+    pageView();
+    $(".header").bind('dblclick', function() {
+       headerEffect();
+    });
+    $(".header").bind('taphold', function() {
+       headerEffect();
+    });
+    $("body" ).on( "swipeleft", nextIssue );
+    $("body" ).on( "swiperight", previousIssue );
+    $(window).bind('resize', responsiveness);
+    responsiveness();
+    $('.issues a').bind('click', function(ev) {
+      pageView();
+      window.location.hash = $(this).attr('href');
+      return false;
+    });
+    $("body").keydown(function(e) {
+      if(e.keyCode == 37) { previousIssue(); }
+      else if(e.keyCode == 39) { nextIssue(); }
+    });
+    loadIssue();
+    $(window).bind('hashchange', loadIssue );
+});
+
 
 
 </script> 
