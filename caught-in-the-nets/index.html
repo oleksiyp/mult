@@ -212,16 +212,6 @@ function pageView() {
   ga('send', 'pageview', window.location.hash.substring(1));
 }
 
-function report(err) {
-  console.debug('error: ' + err.message);
-  ga('send', 'exception', {
-    'exDescription': err.message,
-    'exFatal': true,
-    'appName': 'oleksiyp.github.io',
-    'appVersion': '1.0'
-  });
-}
-
 function loadIssue() {
   if (parseLocation()) {
     var loading = loader(composeTitle);
@@ -364,6 +354,27 @@ function init() {
   });
   loadIssue();
   $(window).bind('hashchange', loadIssue );
+
+  window.addEventListener('error', function(err) {
+    var msg = err.filename + '(' + err.lineno + '): ' + err.message;
+    console.debug('error: ' + msg);
+    ga('send', 'exception', {
+      'exDescription': msg,
+      'exFatal': true,
+      'appName': 'oleksiyp.github.io',
+      'appVersion': '1.0'
+    });
+  });
+  $(document).ajaxError(function(e, request, settings) {
+    var msg = 'ajax error: ' + settings.url + ' ' + e.result;
+    console.debug(msg);
+    ga('send', 'exception', {
+      'exDescription': msg,
+      'exFatal': true,
+      'appName': 'oleksiyp.github.io',
+      'appVersion': '1.0'
+    });
+  });
 }
 
 $(init);
