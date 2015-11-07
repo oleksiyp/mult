@@ -213,18 +213,6 @@ function loadIssue() {
         issueHtml = linkify(issueHtml);
         issueHtml = imgify(issueN, issueHtml);
         textPar.html(issueHtml);
-      },
-      xhr: function(){
-        var xhr = $.ajaxSettings.xhr();
-        var interval = setInterval(function () {
-          if (xhr.readyState > 2) {
-            console.debug('progress');
-          } else {
-            console.debug('done');
-            clearInterval(interval);
-          }
-        }, 150);
-        return xhr;
       }
     }).done(function() {
       loading.stop();
