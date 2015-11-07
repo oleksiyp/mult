@@ -344,7 +344,7 @@ $(function(){
     responsiveness();
     $('.issues a').bind('click', function(ev) {
       pageView();
-      window.location.hash = $(this).attr('href');
+      window.location.hash = '#' + parseInt($(this).attr('href'));
       return false;
     });
     $("body").keydown(function(e) {
@@ -374,16 +374,16 @@ $(function(){
 <div data-role="content" data-theme="a">
 <div class="text"><p></p></div>
 <ul class="issues" data-role="listview">
-  <li><a href="#1">issue #1 of 19-Sep '15</a></li>
-  <li><a href="#2">issue #2 of 26-Sep '15</a></li>
-  <li><a href="#3">issue #3 of 3-Oct '15</a></li>
-  <li><a href="#4">issue #4 of 9-Oct '15</a></li>
-  <li><a href="#5">issue #5 of 12-Oct '15</a></li>
-  <li><a href="#6">issue #6 of 16-Oct '15</a></li>
-  <li><a href="#7">issue #7 of 19-Oct '15</a></li>
-  <li><a href="#8">issue #8 of 23-Oct '15</a></li>
-  <li><a href="#9">issue #9 of 29-Oct '15</a></li>
-  <li><a href="#10">issue #10 of 6-Nov '15</a></li>
+  <li><a href="000.txt.html">issue #1 of 19-Sep '15</a></li>
+  <li><a href="001.txt.html">issue #2 of 26-Sep '15</a></li>
+  <li><a href="002.txt.html">issue #3 of 3-Oct '15</a></li>
+  <li><a href="003.txt.html">issue #4 of 9-Oct '15</a></li>
+  <li><a href="005.txt.html">issue #5 of 12-Oct '15</a></li>
+  <li><a href="006.txt.html">issue #6 of 16-Oct '15</a></li>
+  <li><a href="007.txt.html">issue #7 of 19-Oct '15</a></li>
+  <li><a href="008.txt.html">issue #8 of 23-Oct '15</a></li>
+  <li><a href="009.txt.html">issue #9 of 29-Oct '15</a></li>
+  <li><a href="010.txt.html">issue #10 of 6-Nov '15</a></li>
 </ul>
 </p>
 <div class="sources">
