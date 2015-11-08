@@ -222,9 +222,11 @@ function loadIssue() {
       url : fmtIndex(issueN) + half + ".txt",
       dataType: "text",
       success : function (issueText) {
+        // TODO loading.text(issueText);
+        // if loading is too fast, add an effect of loading
+
         var textPar = $(".text p")
         textPar.text(issueText);
-
         var issueHtml = textPar.html();
         issueHtml = linkify(issueHtml);
         issueHtml = imgify(issueN, issueHtml);
