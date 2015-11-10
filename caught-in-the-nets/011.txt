@@ -1,0 +1,247 @@
+                                                     #11 of 10-Nov '15  
+
+
+ _               _    _       _             
+| |__ _  _ _ __ | |__| |___  | |__  ___ ___ 
+| '_ \ || | '  \| '_ \ / -_) | '_ \/ -_) -_)
+|_.__/\_,_|_|_|_|_.__/_\___| |_.__/\___\___|
+                                            
+  paradox
+
+Simply applying aerodynamic laws to the real bumble bee would result in
+the conclusion that one should not fly at all.  Here is an explanation
+of the real world. So sometimes you need pretty great techical progress
+to explain even simple things.
+
+https://www.youtube.com/watch?v=0xFfJL6y0sw
+
+
+                         _    _     
+ _ _ _  _ _ _  _ _  __ _| |__| |___ 
+| '_| || | ' \| ' \/ _` | '_ \ / -_)
+|_|  \_,_|_||_|_||_\__,_|_.__/_\___|
+                                    
+  code
+
+This a shared code snippet site with ability to run the code. Enjoy.
+
+Dart; C++; Java; Rails; Node.js; PHP; jQuery; Ruby; Django; express;
+Python; CodeIgniter .NET; Flask; CakePHP; Bash
+
+http://code.runnable.com/
+
+
+             _      _   _          
+ _____ _____| |_  _| |_(_)___ _ _  
+/ -_) V / _ \ | || |  _| / _ \ ' \ 
+\___|\_/\___/_|\_,_|\__|_\___/_||_|
+                                   
+  of music
+
+The chart below shows the popularity of the 13 computer-generated
+categories over time. Greater thickness indicates a larger number of
+songs in a category in a given year. Descriptive labels, which give
+an idea of the genres the categories represent, were compiled from
+descriptions users of the music discovery tool Last.fm assigned to
+songs in each category.
+
+IMG:003-music-evolution.png
+
+http://www.latimes.com/visuals/graphics/la-sci-g-music-evolution-20150505-htmlstory.html
+
+
+             _      _   _ _  __     
+ ___ ___  __(_)__ _| | | (_)/ _|___ 
+(_-</ _ \/ _| / _` | | | | |  _/ -_)
+/__/\___/\__|_\__,_|_| |_|_|_| \___|
+                                    
+  why it could be an answer?
+
+..."The oposite to addiction is people connection!"...
+
+IMG:009-addiction.png
+
+And you will wonder why! Here is video explaining the theory.  May be
+it is too much time use "drugs".  The conclusion although is normal.
+That means it is just for catching your attention.
+
+https://www.youtube.com/watch?v=ao8L-0nSYzg
+
+
+    _               
+ __| |_ _____ _____ 
+(_-<  _/ -_) V / -_)
+/__/\__\___|\_/\___|
+                    
+  Job's
+
+IMG:007-steve.jpg
+
+Vision of the World: https://www.youtube.com/watch?v=UvEiSa6_EPA
+
+Secrets of Life: https://www.youtube.com/watch?v=kYfNvmF0Bqw
+
+About failures: https://www.youtube.com/watch?v=zkTf0LmDqKI
+
+That is quite interesting thing. About that vision. That all around
+world is created by people.  I have some story to share. May be it's a
+little bit "pathetic to talk near Steve icon", but it's real.  I was
+playing computer games at my fathers computer center when was kid
+for some years before school.  And suddenly I was thinking following
+way "look this programs probably written not by some aliens(but that
+time that was not so obvious :-) ).  There is probably somebody who
+write this games and they are humans as well, so intersting who are
+this people".  And I aksed my father this question, after some time
+my father went to Switzerland on some project for half a year and
+returned from there with 386 machine.  That was first form of the
+school. Nothing to say I'm happy that happened
+
+https://www.brainpickings.org/2011/12/02/steve-jobs-1995-life-failure/
+
+
+             
+ __ __ _ _ _ 
+/ _/ _` | '_|
+\__\__,_|_|  
+             
+  should be programmed to kill?
+
+Sometimes people should do the tough choice.  Like to cut hand or die.
+
+Now think about this picture below.  How should we program a
+fully autonomous car to select what to do in either case?  What is
+better? Simple answer is to minimize death. But would you buy such
+a car?  That is tricky thing.
+
+IMG:004-programming-to-kill.png
+
+So overal this puzzle is about doing it right in social, behavioural,
+ethical, economical and marketing aspects.
+
+http://www.technologyreview.com/view/542626/why-self-driving-cars-must-be-programmed-to-kill/
+
+
+                _   
+__ __ _____ _ _| |__
+\ V  V / _ \ '_| / /
+ \_/\_/\___/_| |_\_\
+                    
+  is for sure very important in life. 
+
+For moms and kids as well. And kids are future us. So basically for
+everyone. Simple stats
+
+Even after controlling for gender attitudes—to take beliefs
+regarding gender roles out of the equation—the researchers found
+that 33% of daughters of working mothers held supervisory roles,
+compared to only 25% of daughters of stay-at-home moms. “What I
+take away is that employed mothers create an environment in which
+their children’s attitudes on what is appropriate for girls to do
+and what is appropriate for boys to do is affected,” McGinn says.
+
+http://qz.com/434056/working-moms-have-more-successful-daughters-and-more-caring-sons-harvard-business-school-study-says/
+
+
+             _      
+ ___ __ __ _| |__ _ 
+(_-</ _/ _` | / _` |
+/__/\__\__,_|_\__,_|
+                    
+  times
+
+Are not the true programming sites boring?  That's the target state
+for this zine :-)
+
+http://www.scalatimes.com/
+
+
+          _   _           
+ ___ __ _| |_(_)_ _  __ _ 
+/ -_) _` |  _| | ' \/ _` |
+\___\__,_|\__|_|_||_\__, |
+                    |___/ 
+  healthy could be a game changer
+
+Of course that could be just a someones dream, but why not...
+
+Harlan expects a sea change to take place in the way doctors treat
+chronic illness—and the way insurance charges for it. At the
+conference, Kass described a future where doctors write recipes as
+prescriptions and insurance companies treat food as a reimbursable
+expense. (There is, of course, a strong economic argument in favor
+of a prevention-based approach to health.) Harlan predicts that care
+plans will eventually include menu planning, recipes and maybe even
+programming to get the ingredients delivered to patients. “Call me
+up in ten years and let’s see if that’s true.”
+
+IMG:008-food.jpg
+
+http://qz.com/545110/the-future-of-medicine-is-food/
+
+
+                    _             
+ __ ___ _ _  ___ __(_)___ _  _ ___
+/ _/ _ \ ' \(_-</ _| / _ \ || (_-<
+\__\___/_||_/__/\__|_\___/\_,_/__/
+                                  
+  mind could work other way
+
+IMG:001-consciousness.jpg
+
+Moreover, the widely-accepted global workspace theory, first suggested
+by Bernard Baars in 1982, states that consciousness occurs when
+information is made accessible throughout the brain, while unconscious
+information is processed regionally.
+
+To test these theories, a team of neurologists and psychiatrists
+from the University of Michigan constructed an experiment using the
+oddball paradigm, which involves subjecting participants to the same
+regularly-occurring stimulus, interspersed with one incongruous
+stimulus. In this case, subjects were repeatedly shown the word
+“LEFT” for a period of just seven milliseconds at a time. This is
+long enough for the brain to unconsciously register and respond to
+the stimulus, but too short for participants to consciously realize
+what they had seen. The oddball came when they were shown the word
+“RIGHT,” which was flashed for the same period of time and
+therefore again processed unconsciously.
+
+Using electroencephalography to measure the neural responses of
+participants, the researchers found that the oddball stimulus generated
+a P3b response throughout the brain, despite the whole process
+being unconscious. In other words, the occurrence of P3b revealed
+that “at least some forms of widespread, globally distributed,
+sustained processing can occur unconsciously.” The team therefore
+concludes that much of what we thought we knew about consciousness
+is wrong, as neither P3b nor global access to information are NCCs,
+meaning the great mystery of our cognizance continues to deepen.
+
+
+http://www.iflscience.com/brain/leading-theory-about-how-consciousness-works-may-be-wrong
+
+
+      _           
+ _ __| |__ _ _ _  
+| '_ \ / _` | ' \ 
+| .__/_\__,_|_||_|
+|_|               
+  for the disaster
+
+And please don't put Thread.sleep in your software!
+
+IMG:006-failure.png
+
+http://schd.ws/hosted_files/buildstuff2013/8d/Viktor%20Klang%20Failure-deal-with-it.pdf
+
+
+              _                      _      
+ __ _ _ _  __| |_ _ ___ _ __  ___ __| |__ _ 
+/ _` | ' \/ _` | '_/ _ \ '  \/ -_) _` / _` |
+\__,_|_||_\__,_|_| \___/_|_|_\___\__,_\__,_|
+                                            
+  will crash our galaxy in 5B years
+
+So take some popcorn, enjoy. Just few moments and we are there.
+
+https://www.youtube.com/watch?v=ZdF2wX5GfdU
+
+
