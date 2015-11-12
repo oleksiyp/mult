@@ -20,6 +20,13 @@
   <link rel="stylesheet" href="3party/jquery.mobile.structure-1.4.5.min.css" />
   <script src="3party/jquery.min.js" type="text/javascript"></script>
   <style type="text/css">
+    .clear {
+    clear:both;
+    display:block;
+    overflow:hidden;
+    visibility:hidden;
+    height:0px;
+    }
     .header p {
     font-size: 20px;
     font-size: 2.0vw;
@@ -27,6 +34,9 @@
     white-space: pre-wrap;
     text-shadow: 0 2px 0.5px #a04D5B !important;
     }
+    .header .links {
+    float: right;
+    } 
     .wide .header p {
     font-size: 24px !important;
     max-width: 1200px;
@@ -398,6 +408,8 @@ $(init);
                /___/
 
 </p>
+  <div class="links"><a href="https://www.facebook.com/groups/caught.in.the.nets/">fb group</a></div>
+  <div class="clear"></div>
   </div>
   <div data-role="content" data-theme="a">
 
